@@ -1,0 +1,43 @@
+import numpy as np
+#rank 1 array
+a=np.array([1,3,5])
+print(type(a))
+print(a.shape)
+a[0]=2
+#rank 2 array
+b=np.array([[2,4,6],[1,3,5]])
+print(b.shape)
+b[1,2]=7
+print(b)
+#create array using shape
+c=np.zeros([2,2])
+print("zero matrix=\n",c)
+d=np.ones([2,3])
+print("All ones=\n",d)  #Constatnt matrix
+e=np.full([2,3],13)
+print("constant matrix=\n",e)
+f=np.eye(2)  #identity marrix
+print("Identity matrix=\n",f)
+g=np.random.random([2,3]) #random matrix
+print("Random matrix=\n",g)
+# array slicing
+a1=np.random.random([4,5])
+print(a1)
+print("required")
+print(a1[:3,:3])
+#reshape
+h = np.array([(1,2,3), (4,5,6)])
+print(h)
+h.reshape(3,2)
+#flatten data
+h.flatten()
+#arrage
+print("no.s are",np.arange(1, 14, 4))
+
+#NumPy Statistical Functions
+n1 = np.random.normal(5, 0.5, 10)
+print(n1)
+print('max',np.max(n1),'min=',np.min(n1),'mean=',np.mean(n1),'median=',np.median(n1),'std',np.std(n1))
+#Multiplication
+d.dot(e)
+print("matrix multiplication",np.matmul(b,h))
